@@ -219,6 +219,102 @@ body::-webkit-scrollbar-thumb {
   color: #006096 !important;
 }
 
+/* menu */
+#header .menu {
+  clear: both;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .2s ease-out;
+  transition: max-height .2s ease-out;
+  /* border: 1px solid green; */
+}
+
+/* menu icon */
+#header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#header .menu-icon .navicon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  -webkit-transition: background .2s ease-out;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+#header .menu-icon .navicon:before,
+#header .menu-icon .navicon:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+#header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+#header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+#header .menu-btn {
+  display: none;
+}
+
+#header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+#header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+#header .menu-btn:checked ~ .menu-icon .navicon:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#header .menu-btn:checked ~ .menu-icon .navicon:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+#header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+@media (min-width: 992px) {
+  #header .menu {
+    clear: none;
+    max-height: none;
+    /* border: 1px solid red; */
+  }
+  #header .menu li a {
+    clear: none;
+    max-height: none;
+  }
+  #header .menu-icon {
+    display: none;
+  }
+}
+
 /*mudar cor menu responsivo*/
 .navbar-dark .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28236, 236, 236, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -256,6 +352,27 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+@media (max-width: 390px) {
+  #header.bg {
+    height: 100vw;
+  }
+}
+
+.bg-cor {
+  height: 100%;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  /* position: fixed;
+    width: 100%;
+    z-index: 9; */
+}
+
+@media (min-width: 992px) {
+  .bg-cor {
+    background: transparent !important;
+  }
+}
+
 /*Nav*/
 #nav {
   padding-top: 4vw;
@@ -266,34 +383,47 @@ body::-webkit-scrollbar-thumb {
 
 #nav .logo {
   width: 24vw;
+  min-width: 160px;
 }
 
 #nav .menu {
   margin-top: 3vw;
   margin-left: 1.2vw;
-}
-
-@media (max-width: 1199px) {
-  #nav .menu {
-    margin-left: -1vw;
-  }
+  margin-bottom: 0;
+  padding-left: 0;
+  width: 90%;
 }
 
 @media (max-width: 991px) {
   #nav .menu {
-    display: none;
+    /* display: none; 
+             height: 0;
+            overflow: hidden;*/
+    /*  max-height: 0; */
   }
 }
 
 #nav .menu li a {
   font-weight: 800;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 @media (max-width: 1599px) {
   #nav .menu li a {
-    font-size: 18px;
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  #nav .menu li a {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  #nav .menu li a {
+    font-size: 14px !important;
   }
 }
 
@@ -362,7 +492,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #bio h2.title {
-  padding-top: 52px;
+  padding-top: 80px;
   position: relative;
   padding-left: 18vw;
 }
@@ -529,7 +659,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #novidades #article h2.title {
-  padding-top: 50px;
+  padding-top: 80px;
   position: relative;
   text-align: right;
 }
@@ -559,7 +689,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #discografia h2.title {
-  padding-top: 50px;
+  padding-top: 80px;
   position: relative;
   color: #e9424b;
 }
@@ -641,7 +771,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #fotosevideos h2.title {
-  padding-top: 50px;
+  padding-top: 80px;
   position: relative;
   text-align: right;
   color: #e9424b;
@@ -724,7 +854,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #institucional h2.title {
-  padding-top: 52px;
+  padding-top: 80px;
   position: relative;
   padding-left: 18vw;
   color: #ffa309;
@@ -1075,7 +1205,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #faclube h2.title {
-  padding-top: 52px;
+  padding-top: 80px;
   position: relative;
   padding-left: 18vw;
   color: #e9424b;
@@ -1194,7 +1324,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #contratante .container-center .box-links a.link:hover {
-  background: #c0e238;
+  background: #000;
 }
 
 #digitais {
