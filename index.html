@@ -56,15 +56,15 @@
     </div>
 
     <div id="box-audio">
-        <button id="button-play" onclick="playaudio()" type="button" style="display: none;">
+        <button id="button-play" onclick="playaudio()" type="button">
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABp0lEQVRYhe3Xv04VQRgF8B/Ga2cBnbliYgEEYojxT2VijJFWaPUFKOUReAXA8AhQamJ5AQ2JL2ACibHzBq1sKGgMV4rZDZfFu7szd29oOMlXzJ+dc+bbyTdnuMYVYyxy/gyWsIA2JrP+Lo7QwUd8b0pgjifYxb+a8RXPmiBuYRO9CPI8enifrZGECXxOIC7GHsZjyVvZh8OS57GPWzECNhskz2OjLvlT5f/8G04SBPTwuI6AqtSv4j4+JIjoVJHP1lhktW/+SxxEipjpJ7xRELBYpbCAPTzECo5rfvO6TMCrSAHwF2uYw7awyzIslAm4lyAgxxHe4oVwUAfhAkdRwJ0hBOTYF077Mv78Z7xdJqAqfU2g19+4WRj8jdtDEjwXis78gPFf/Y1iBn4OQdzGFr6UkF/iKArYSSBu4R0O8Ua1xygtRlNGX4imq3ZUZTxGWooJ7mcUl9EpHtURQHAyqdfuoFivS044WDEesCqiDQnBRjXhinYlWLIcLaGopJjSUyHtxWKXhAf4FEHeUfPAxT5Mppw/TCZxN+vvZrEjPEx+RK57javDGfQCTMIeFX50AAAAAElFTkSuQmCC"/>
         </button>
-        <button id="button-pause" onclick="pauseaudio()" type="button">
+        <button id="button-pause" onclick="pauseaudio()" type="button" style="display: none;">
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABYklEQVRYhe2Xv07DMBDGfyDCTlcoW6mQGBB/JiYQrMDb8AxdoepzIDEmLRISDwHdqIAH6NzAYFu4FnFybuIu/aSTIt/5vi/2xTnDCkvGmjC+C9wCV8A20NbjE+ATSIFH4K0ugQYnwBD4qWivwFkdxAkwAHIBubEc6OscQWgBzwHEro2ALSl5oicuSm7sBdiUCBjUSG7soSr5KWF7XqUmjl2y/z7DEXBeIK5nPd8JfAYZ6hMuxD7+t7Ah8dnWtQPXnYk3PnU14don4DKCgLktcAXsRhDg5ZjSfA1M7UB3BdxETSD3CfiOIODLJ+AjgoA5DldAFkFA6nN2aL4I9+zADWfiGHUUXxQILDpiy3wGGfBeFnQIzIj0MypCvwEB91XJQTUkkh6wzMQNCag2qo6uaEhAS2aQoDqZkAZlhlp2t9CDcAA8CchT4KhKYunFpMPfxaQN7OjxibYMdTEZC/OusDz8ApFTKe9TTB54AAAAAElFTkSuQmCC"/>
         </button> 
     </div>
 
-    <audio autoplay loop id="audio">
+    <audio loop id="audio">
         <source src="audio/Viva_La_Vida_Master.mp3" type="audio/mpeg">
         Your browser does not support HTML5 audioeo.
     </audio>
