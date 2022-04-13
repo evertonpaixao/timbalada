@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Timbalada</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Front-end: Everton Paixão"/>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Timbalada</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Front-end: Everton Paixão"/>
+        <meta name="description" content=""/>
+        <meta name="keywords" content=""/>
 
-    <!-- META TAGS FACEBOOK -->
-    <meta property="og:title" content=""/>
-    <meta property="og:image" content=""/>
-    <meta property="og:description" content=""/>
-    <meta property="og:url" content=""/>
+        <!-- META TAGS FACEBOOK -->
+        <meta property="og:title" content=""/>
+        <meta property="og:image" content=""/>
+        <meta property="og:description" content=""/>
+        <meta property="og:url" content=""/>
 
-    <!-- URL SITE -->
-    <base href="" />
+        <!-- URL SITE -->
+        <base href="" />
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,800;1,400&display=swap" rel="stylesheet">
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,800;1,400&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap 5.1.3 -->
-    <link rel="stylesheet" href="library/bootstrap-5.1.3/css/bootstrap.min.css">
+        <!-- Bootstrap 5.1.3 -->
+        <link rel="stylesheet" href="library/bootstrap-5.1.3/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="library/fancybox/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="library/fancybox/jquery.fancybox.min.css">
 
-    <!-- OWL CAROUSEL 2 -->
-	<link rel="stylesheet" href="library/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="library/owlcarousel/assets/owl.theme.default.min.css">    
+        <!-- OWL CAROUSEL 2 -->
+        <link rel="stylesheet" href="library/owlcarousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="library/owlcarousel/assets/owl.theme.default.min.css">    
 
-    <!-- Theme Site CSS -->
-    <link rel="stylesheet" href="styles/theme.css">
+        <!-- Theme Site CSS -->
+        <link rel="stylesheet" href="styles/theme.css">
+        
+    </head>
 
     <body class="home">
 
@@ -53,9 +55,40 @@
         </div>
     </div>
 
+    <div id="box-audio">
+        <button id="button-play" onclick="playaudio()" type="button" style="display: none;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABp0lEQVRYhe3Xv04VQRgF8B/Ga2cBnbliYgEEYojxT2VijJFWaPUFKOUReAXA8AhQamJ5AQ2JL2ACibHzBq1sKGgMV4rZDZfFu7szd29oOMlXzJ+dc+bbyTdnuMYVYyxy/gyWsIA2JrP+Lo7QwUd8b0pgjifYxb+a8RXPmiBuYRO9CPI8enifrZGECXxOIC7GHsZjyVvZh8OS57GPWzECNhskz2OjLvlT5f/8G04SBPTwuI6AqtSv4j4+JIjoVJHP1lhktW/+SxxEipjpJ7xRELBYpbCAPTzECo5rfvO6TMCrSAHwF2uYw7awyzIslAm4lyAgxxHe4oVwUAfhAkdRwJ0hBOTYF077Mv78Z7xdJqAqfU2g19+4WRj8jdtDEjwXis78gPFf/Y1iBn4OQdzGFr6UkF/iKArYSSBu4R0O8Ua1xygtRlNGX4imq3ZUZTxGWooJ7mcUl9EpHtURQHAyqdfuoFivS044WDEesCqiDQnBRjXhinYlWLIcLaGopJjSUyHtxWKXhAf4FEHeUfPAxT5Mppw/TCZxN+vvZrEjPEx+RK57javDGfQCTMIeFX50AAAAAElFTkSuQmCC"/>
+        </button>
+        <button id="button-pause" onclick="pauseaudio()" type="button">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABYklEQVRYhe2Xv07DMBDGfyDCTlcoW6mQGBB/JiYQrMDb8AxdoepzIDEmLRISDwHdqIAH6NzAYFu4FnFybuIu/aSTIt/5vi/2xTnDCkvGmjC+C9wCV8A20NbjE+ATSIFH4K0ugQYnwBD4qWivwFkdxAkwAHIBubEc6OscQWgBzwHEro2ALSl5oicuSm7sBdiUCBjUSG7soSr5KWF7XqUmjl2y/z7DEXBeIK5nPd8JfAYZ6hMuxD7+t7Ah8dnWtQPXnYk3PnU14don4DKCgLktcAXsRhDg5ZjSfA1M7UB3BdxETSD3CfiOIODLJ+AjgoA5DldAFkFA6nN2aL4I9+zADWfiGHUUXxQILDpiy3wGGfBeFnQIzIj0MypCvwEB91XJQTUkkh6wzMQNCag2qo6uaEhAS2aQoDqZkAZlhlp2t9CDcAA8CchT4KhKYunFpMPfxaQN7OjxibYMdTEZC/OusDz8ApFTKe9TTB54AAAAAElFTkSuQmCC"/>
+        </button> 
+    </div>
+
+    <audio autoplay loop id="audio">
+        <source src="audio/Viva_La_Vida_Master.mp3" type="audio/mpeg">
+        Your browser does not support HTML5 audioeo.
+    </audio>
+
+    <script> 
+        var audio = document.getElementById("audio"); 
+        var play = document.getElementById("button-play"); 
+        var pause = document.getElementById("button-pause"); 
+
+        function playaudio() { 
+            audio.play();
+            play.style.display = "none";
+            pause.style.display = "block";
+        } 
+
+        function pauseaudio() { 
+            audio.pause();
+            pause.style.display = "none";
+            play.style.display = "block";
+        } 
+    </script> 
+
     <!-- Header -->
     <header id="header" class="bg box-scroll">
-
         <div class="bg-cor">
 
             <!-- Nav -->
@@ -233,24 +266,30 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="list-capas">
-                            <img src="discografia/1993-Timbalada.jpg" alt=""/>
-                            <img src="discografia/1994_[TONELADAS_DE_DESEJO]_-_CD_CADA_CABEÇA_E_UM_MUNDO_.jpg" alt=""/>
-                            <img src="discografia/1995_[MIMAR_VOCE]_-_CD_ANDEI_ROAD_.jpg" alt=""/>
-                            <img src="discografia/1996_-_[_]_CD_DANCE.jpeg" alt=""/>
-                            <img src="discografia/1999_-_[PENSE_MINHA_COR_]PENSE_MINHA_COR_.jpg" alt=""/>
-                            <img src="discografia/1998__[]_CD_VAMOS_DAR_A_VOLTA_NO_GUETHO_-_AO_VIVO_.jpg" alt=""/>
-                            <img src="discografia/1997_-_[_A_LATINHA]_-_MAE_DE_SAMBA_.jpg" alt=""/>
+                            <img src="discografia/1993.jpg" alt=""/>
+                            <img src="discografia/1994.jpg" alt=""/>
+                            <img src="discografia/1995.jpg" alt=""/>
+                            <img src="discografia/1995x.jpg" alt=""/>
                             <img src="discografia/1996_[_AGUA_MINERAL_]_-_CD_MINERAL.jpg" alt=""/>
+                            <img src="discografia/1997.jpg" alt=""/>
+                            <img src="discografia/1998.jpg" alt=""/>
+                            <img src="discografia/1999.jpg" alt=""/>
                         </div>
                         <div id="discografia-mais" class="list-capas cont" style="display: none;">
-                            <img src="discografia/1993-Timbalada.jpg" alt=""/>
-                            <img src="discografia/1994_[TONELADAS_DE_DESEJO]_-_CD_CADA_CABEÇA_E_UM_MUNDO_.jpg" alt=""/>
-                            <img src="discografia/1995_[MIMAR_VOCE]_-_CD_ANDEI_ROAD_.jpg" alt=""/>
-                            <img src="discografia/1996_-_[_]_CD_DANCE.jpeg" alt=""/>
-                            <img src="discografia/1999_-_[PENSE_MINHA_COR_]PENSE_MINHA_COR_.jpg" alt=""/>
-                            <img src="discografia/1998__[]_CD_VAMOS_DAR_A_VOLTA_NO_GUETHO_-_AO_VIVO_.jpg" alt=""/>
-                            <img src="discografia/1997_-_[_A_LATINHA]_-_MAE_DE_SAMBA_.jpg" alt=""/>
-                            <img src="discografia/1996_[_AGUA_MINERAL_]_-_CD_MINERAL.jpg" alt=""/>
+                            <img src="discografia/2001.jpg" alt=""/>
+                            <img src="discografia/2002.jpg" alt=""/>
+                            <img src="discografia/2003.jpg" alt=""/>
+                            <img src="discografia/2006.jpg" alt=""/>
+                            <img src="discografia/2007.jpg" alt=""/>
+                            <img src="discografia/SINGLE_2008_[REI_GONZAGA].jpg" alt=""/>
+                            <img src="discografia/2014_[]_-_TIMBALADA_DA_MACOTA.jpg" alt=""/>
+                            <img src="discografia/SINGLE_2017_[POR_CONTA_DESSE_AMOR].jpg" alt=""/>
+                            <img src="discografia/2017_-_[TRAZ_A_CUCHARA]_TIMBALADA_SEC_XXI_.jpg" alt=""/>
+                            <img src="discografia/SINGLE_2018_[E_DESSE_NEGO_QUE_ELA_GOSTA]_.PNG" alt=""/>
+                            <img src="discografia/SINGLE_2018_[SOU_BRASILEIRO_SOU].jpg" alt=""/>
+                            <img src="discografia/SINGLE_2019_[CHUPETA].jpg" alt=""/>
+                            <img src="discografia/2019_[_]_ALBUM_VOLTAMOS_PARA_CASA_.jpg" alt=""/>
+                            <img src="discografia/SINGLE_2020_[SAGRADO_MAR]_.jpg" alt=""/>
                         </div>
                     </div>
                 </div>
@@ -474,7 +513,7 @@
                 <form>
                     <input id="login" name="login" type="text" placeholder="Login" onkeyup="busca()"; />
                     <input id="senha" name="senha" type="password" placeholder="Senha" onkeyup="busca()"; />
-                    <button disabled type="button" id="buttonEnviarForm" onclick="enviarForm();">Enviar</button>
+                    <button disabled type="button" id="buttonEnviarForm" onclick="enviarForm();">Acessar</button>
                     <p id="mensagemError"></p>
                 </form>
             </div>
@@ -628,7 +667,8 @@
                 $('#header #nav .menu li').css('float','inherit');
                 $('#header #nav .menu').css('margin-top','3vw');
                 $('#header #nav .menu li a').css('margin-right','0');
-                $('#header #nav .menu li a').css('font-size','18px');
+               /*  $('#header #nav .menu li a').css('font-size','18px'); */
+               $('#header #nav li a').removeClass('fixed');
             } else {
                 $('#header #nav').css('position','fixed');
                 $('#header #nav').css('background','#212121e0');
@@ -644,7 +684,8 @@
                 $('#header #nav .menu li').css('float','left');
                 $('#header #nav .menu').css('margin-top','0');
                 $('#header #nav .menu li a').css('margin-right','10px');
-                $('#header #nav .menu li a').css('font-size','14px');
+                /* $('#header #nav .menu li a').css('font-size','14px'); */
+                $('#header #nav li a').addClass('fixed');
             }
     
         });
@@ -690,7 +731,7 @@
     <script>
         $(window).scroll(function () {
 
-            $('h2.title, .img-caixa, #novidades #article .link, #fotosevideos .list-thumbs img').each(function () {
+            $('h2.title, .img-caixa, #novidades #article .link, #fotosevideos .list-thumbs img, #article').each(function () {
                 var imagePos = $(this).offset().top;
 
                 var topOfWindow = $(window).scrollTop();
@@ -764,7 +805,5 @@
         })
     </script>
 
-</head>
-    
 </body>
 </html>

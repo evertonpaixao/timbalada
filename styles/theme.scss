@@ -304,6 +304,28 @@ body::-webkit-scrollbar-thumb {
 }
 
 /*-----Theme-------*/
+/*Áudio*/
+#box-audio {
+    position: fixed;
+    right: 0;
+    z-index: 9999;
+    bottom: 10px;
+    right: 10px;
+    button {
+        border: none;
+        border-radius: 50%;
+        width: 32px;
+        height: 31px;
+        img {
+            margin-left: -6px;
+            margin-top: -1.5px;
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+}
+
 /*Header*/
 #header.bg {
     background: url(../images/cantores.png) no-repeat bottom center;
@@ -381,18 +403,30 @@ body::-webkit-scrollbar-thumb {
         li a {
             font-weight: 800;
             text-transform: uppercase;
-            font-size: 18px;
+            font-size: 24px;
+
+            &.fixed {
+                font-size: 16px;
+            }
             @media (max-width: 1599px) {
-                font-size: 14px !important;
+                font-size: 18px;
             }
             @media (max-width: 1199px) {
-                font-size: 14px !important;
+                font-size: 14px;
             }
             @media (max-width: 991px) {
-                font-size: 14px !important;
+                font-size: 14px;
             }
         }
 
+    }
+}
+
+#article {
+    opacity: 0;
+    transition: all 900ms ease-out;
+    &.animation {
+        opacity: 1;
     }
 }
 
@@ -712,12 +746,13 @@ body::-webkit-scrollbar-thumb {
             img {
                 width: 25%;
                 padding: 0 5px;
+                margin-bottom: 5px;
 
-                &:first-child {
+                /* &:first-child {
                     padding-bottom: 7px;
-                }                
+                } */                
 
-                @media (max-width: 370px) {
+                @media (max-width: 490px) {
                     width: 50%;
                 }
 
@@ -1317,6 +1352,7 @@ body::-webkit-scrollbar-thumb {
             display: flex;
             flex-flow: column;
             justify-content: center;
+            padding: 0 1rem;
             input {
                 margin-bottom: 5px;
                 padding: 10px;

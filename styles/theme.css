@@ -332,6 +332,31 @@ body::-webkit-scrollbar-thumb {
 }
 
 /*-----Theme-------*/
+/*Áudio*/
+#box-audio {
+  position: fixed;
+  right: 0;
+  z-index: 9999;
+  bottom: 10px;
+  right: 10px;
+}
+
+#box-audio button {
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 31px;
+}
+
+#box-audio button img {
+  margin-left: -6px;
+  margin-top: -1.5px;
+}
+
+#box-audio button img:hover {
+  opacity: .8;
+}
+
 /*Header*/
 #header.bg {
   background: url(../images/cantores.png) no-repeat bottom center;
@@ -424,25 +449,39 @@ body::-webkit-scrollbar-thumb {
 #nav .menu li a {
   font-weight: 800;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 24px;
+}
+
+#nav .menu li a.fixed {
+  font-size: 16px;
 }
 
 @media (max-width: 1599px) {
   #nav .menu li a {
-    font-size: 14px !important;
+    font-size: 18px;
   }
 }
 
 @media (max-width: 1199px) {
   #nav .menu li a {
-    font-size: 14px !important;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 991px) {
   #nav .menu li a {
-    font-size: 14px !important;
+    font-size: 14px;
   }
+}
+
+#article {
+  opacity: 0;
+  -webkit-transition: all 900ms ease-out;
+  transition: all 900ms ease-out;
+}
+
+#article.animation {
+  opacity: 1;
 }
 
 #timbalada {
@@ -796,13 +835,13 @@ body::-webkit-scrollbar-thumb {
 #discografia .bg .list-capas img {
   width: 25%;
   padding: 0 5px;
+  margin-bottom: 5px;
+  /* &:first-child {
+                    padding-bottom: 7px;
+                } */
 }
 
-#discografia .bg .list-capas img:first-child {
-  padding-bottom: 7px;
-}
-
-@media (max-width: 370px) {
+@media (max-width: 490px) {
   #discografia .bg .list-capas img {
     width: 50%;
   }
@@ -1515,6 +1554,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0 1rem;
 }
 
 #contratante #box-form form input {
