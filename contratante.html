@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Timbalada</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Front-end: Everton Paixão"/>
+        <meta name="description" content=""/>
+        <meta name="keywords" content=""/>
+
+        <!-- META TAGS FACEBOOK -->
+        <meta property="og:title" content=""/>
+        <meta property="og:image" content=""/>
+        <meta property="og:description" content=""/>
+        <meta property="og:url" content=""/>
+
+        <!-- URL SITE -->
+        <base href="" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;800&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap 5.1.3 -->
+        <link rel="stylesheet" href="library/bootstrap-5.1.3/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="library/fancybox/jquery.fancybox.min.css">
+
+        <!-- OWL CAROUSEL 2 -->
+        <link rel="stylesheet" href="library/owlcarousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="library/owlcarousel/assets/owl.theme.default.min.css">    
+
+        <!-- Theme Site CSS -->
+        <link rel="stylesheet" href="styles/theme.css">
+        
+    </head>
+
+    <body class="home">
+
+    <h1 style="display: none;">Timbalada</h1>    
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header" class="bg box-scroll">
+        <div class="bg-cor">
+
+            <!-- Nav -->
+            <nav id="nav">
+                <a class="nav-item scroll" href="./#"><img class="img-fluid logo" src="images/logo-timbalada.png" alt=""/></a>
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                <ul class="menu">
+                    <li class="nav-item scroll"><a href="./#timbalada">Movimento Timbalada</a></li>
+                    <li class="nav-item scroll"><a href="./#bio">Bio</a></li>
+                    <li class="nav-item scroll"><a href="./#novidades">Novidades</a></li>
+                    <li class="nav-item scroll"><a href="./#discografia">Discografia</a></li>
+                    <li class="nav-item scroll"><a href="./#fotosevideos">Fotos e Vídeos</a></li>
+                    <li class="nav-item scroll"><a href="./#institucional">Institucional</a></li>
+                    <li class="nav-item scroll"><a href="./#guetho">O Guetho</a></li>
+                    <li class="nav-item scroll"><a href="./#faclube">Fã-Clube</a></li>
+                    <!-- <li class="nav-item scroll"><a href="#contratante">Área Contratante</a></li> -->
+                </ul>
+            </nav>
+            <!--/ Nav -->
+
+        </div>
+
+    </header>
+    <!--/ Header -->
+
+    <!-- Section -->
+    <section class="section box-scroll" id="contratante">
+        <div class="container-center">            
+            <h2 class="title">Área do Contratante</h2>
+            <div id="box-form" style="display: none;">
+                <h3 class="subtitle">Faça o login para ter acesso<br>a todo o nosso material de trabalho:<br><br>release, camarim, foto em alta e mapa de palco / rider</h3>
+                <br clear="all"/>
+                <form>
+                    <input id="login" name="login" type="text" placeholder="Login" onkeyup="busca()"; />
+                    <input id="senha" name="senha" type="password" placeholder="Senha" onkeyup="busca()"; />
+                    <button disabled type="button" id="buttonEnviarForm" onclick="enviarForm();">Acessar</button>
+                    <p id="mensagemError"></p>
+                </form>
+            </div>
+            <div id="box-logado" style="display: block;">
+                <h3 class="subtitle">Clique para baixar</h3>
+                <div class="box-links">
+                    <a class="link" href="https://drive.google.com/drive/folders/1Jj8P-VkEuWSSWPltYy0Qu183xWpOfmjJ" target="_blank">Release</a>
+                    <a class="link" href="https://drive.google.com/drive/folders/1TQu3r0Bk8jn1Szn53-1jCoWojVyT2iVA" target="_blank">Camarim</a>
+                    <a class="link" href="https://drive.google.com/drive/folders/1n5uoaEW9b0juHIvoOb_iD9JhnInmEOgb" target="_blank">Fotos em alta</a>
+                    <a class="link" href="https://drive.google.com/drive/folders/1gO3OSA620xvq6u80IpVMMztrrSOw_ZIO" target="_blank">Mapa de palco / Rider</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ Section -->
+
+    <!-- Section -->
+    <section class="section" id="digitais">
+        <div class="container-center">            
+            <h2 class="title">Plataformas Digitais</h2>
+            <div class="box-links">
+                <a class="link" href="https://www.deezer.com/br/artist/152180" target="_blank"><img src="images/ico-deezer.png" alt=""/></a>
+                <a class="link" href="https://open.spotify.com/artist/1Da4NyNC4CLayaNGGmL9uZ?si=1gu6namgQkySSOb1gCN0sQ" target="_blank"><img src="images/ico-spotify.png" alt=""/></a>
+                <a class="link" href="https://twitter.com/timbalada_" target="_blank"><img src="images/ico-twitter.png" alt=""/></a>
+                <a class="link" href="https://www.instagram.com/timbaladaoficial/" target="_blank"><img src="images/ico-instagram.png" alt=""/></a>
+                <a class="link" href="https://pt-br.facebook.com/bandatimbaladaoficial/" target="_blank"><img src="images/ico-facebook.png" alt=""/></a>
+            </div>
+        </div>
+    </section>
+    <!--/ Section -->
+
+    <!-- Jquery -->
+    <script src="library/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap 5 -->
+    <script src="library/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Preloader -->
+    <script>
+        $("#preloader").fadeOut("slow");
+    </script>
+
+    <script src="library/parallax/jquery.parallax-1.1.3.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('.bg.parallax').parallax("50%", -.5);
+        $('#header').parallax("50%", -.5);
+    })
+    </script>
+    
+    <script>
+        $(window).scroll(function(){
+    
+            $scrollTop = $(this).scrollTop();
+    
+            if ($scrollTop <= 200) {
+                $('#header #nav').css('position','inherit');
+                $('#header #nav').css('background','transparent');
+                $('#header #nav').css('width','inherit');
+                $('#header #nav').css('display','block');
+                $('#header #nav').css('padding-top','4vw');
+                $('#header #nav').css('padding-bottom','4vw');
+                $('#header #nav .logo').css('width','24vw');
+                /* $('#header #nav .menu').css('width','90%'); */
+                $('#header #nav .menu li').css('float','inherit');
+                $('#header #nav .menu').css('margin-top','3vw');
+                $('#header #nav .menu li a').css('margin-right','0');
+               /*  $('#header #nav .menu li a').css('font-size','18px'); */
+               $('#header #nav li a').removeClass('fixed');
+            } else {
+                $('#header #nav').css('position','fixed');
+                $('#header #nav').css('background','#212121e0');
+                $('#header #nav').css('width','100%');
+                $('#header #nav').css('display','flex');
+                $('#header #nav').css('flex-wrap','wrap');
+                $('#header #nav').css('padding-top','10px');
+                $('#header #nav').css('padding-bottom','10px');
+                $('#header #nav').css('align-items','center');
+                $('#header #nav').css('justify-content','space-between');
+                $('#header #nav .logo').css('width','120px');
+                /* $('#header #nav .menu').css('width','90%'); */
+                $('#header #nav .menu li').css('float','left');
+                $('#header #nav .menu').css('margin-top','0');
+                $('#header #nav .menu li a').css('margin-right','10px');
+                /* $('#header #nav .menu li a').css('font-size','14px'); */
+                $('#header #nav li a').addClass('fixed');
+            }
+    
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            estado=0;
+            $(".menu-icon").click(function() {
+                if (estado==0) {  
+                    //$(".menu").slideDown("fast"); 
+                    $('#header .bg-cor').css('background','rgba(33, 33, 33, 0.88)');
+                    estado++;
+                } else {
+                    //$(".menu").slideUp("fast"); 
+                    $('#header .bg-cor').css('background','transparent');
+                    estado--;
+                }
+            });
+
+            /* $(".nav-item").click(function() {
+                $('#header .menu-btn:checked ~ .menu').css('max-height','0');
+            }); */
+
+        })
+    </script>
+
+    <script>
+        setInterval(function() { jQuery("#header.bg").animate({ opacity: '1' }, 'show'); }, 600);
+    </script>
+
+</body>
+</html>

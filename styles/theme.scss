@@ -407,6 +407,13 @@ body::-webkit-scrollbar-thumb {
 
             &.fixed {
                 font-size: 16px;
+                font-weight: 400;
+                @media (max-width: 1175px) {
+                    font-size: 14px;
+                }
+                @media (max-width: 1145px) {
+                    font-size: 13px;
+                }
             }
             @media (max-width: 1599px) {
                 font-size: 18px;
@@ -446,7 +453,7 @@ body::-webkit-scrollbar-thumb {
     .bg {
         background: url(../images/bg-section-timbalada.png) repeat;
         width: 100%;
-        height: 87px;
+        height: 84px;
         border-top: 15px solid #ff404a;
     }
 
@@ -587,7 +594,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     .arte-section-bio-footer {        
-        background: url(../images/arte-section-bio2.png) no-repeat top right;
+        background: url(../images/arte-section-bio2.png) repeat top right;
         background-size: contain;
         width: 753px;
         height: 179px;
@@ -615,7 +622,7 @@ body::-webkit-scrollbar-thumb {
 
         .link {
             display: flex;
-            margin-bottom: 0;
+            margin-bottom: 4rem;
             opacity: 0;
             transition: all 900ms ease-out;
 
