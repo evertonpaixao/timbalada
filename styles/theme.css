@@ -936,7 +936,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 39vw;
+  height: 107vw;
   overflow: hidden;
 }
 
@@ -986,6 +986,26 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 370px) {
   #fotosevideos .list-thumbs .img-width-34 {
+    width: 100%;
+  }
+}
+
+#fotosevideos .list-thumbs .img-width-25 {
+  width: 25%;
+}
+
+@media (max-width: 370px) {
+  #fotosevideos .list-thumbs .img-width-25 {
+    width: 100%;
+  }
+}
+
+#fotosevideos .list-thumbs .img-width-20 {
+  width: 20%;
+}
+
+@media (max-width: 370px) {
+  #fotosevideos .list-thumbs .img-width-20 {
     width: 100%;
   }
 }
