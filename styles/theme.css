@@ -233,7 +233,7 @@ body::-webkit-scrollbar-thumb {
 #header .menu-icon {
   cursor: pointer;
   display: inline-block;
-  float: right;
+  /* float: right */
   padding: 28px 20px;
   position: relative;
   -webkit-user-select: none;
