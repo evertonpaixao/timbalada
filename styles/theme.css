@@ -25,6 +25,8 @@ body {
 a {
   color: #fff;
   text-decoration: none;
+  -webkit-transition: all 350ms linear;
+  transition: all 350ms linear;
 }
 
 a:hover {
@@ -936,7 +938,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 107vw;
+  height: 118vw;
   overflow: hidden;
 }
 
@@ -976,6 +978,16 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 370px) {
   #fotosevideos .list-thumbs .img-width-16 {
+    width: 100%;
+  }
+}
+
+#fotosevideos .list-thumbs .img-width-16-6 {
+  width: 16.666%;
+}
+
+@media (max-width: 370px) {
+  #fotosevideos .list-thumbs .img-width-16-6 {
     width: 100%;
   }
 }
@@ -1648,6 +1660,8 @@ body::-webkit-scrollbar-thumb {
 #digitais .container-center .box-links a.link {
   margin: 0 .3rem;
   border-radius: 100%;
+  -webkit-transition: all 600ms linear;
+  transition: all 600ms linear;
 }
 
 #digitais .container-center .box-links a.link:hover {

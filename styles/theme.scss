@@ -43,6 +43,7 @@ body {
 a {
     color: $color-light;
     text-decoration: none;
+    transition: all 350ms linear;
     &:hover {
         color: #ccc;
     }
@@ -839,7 +840,7 @@ body::-webkit-scrollbar-thumb {
 
         display: flex;
         flex-wrap: wrap;
-        height: 107vw;
+        height: 118vw;
         overflow: hidden;
         @media (max-width: 370px) {
             height: initial;
@@ -865,6 +866,13 @@ body::-webkit-scrollbar-thumb {
 
         .img-width-16 {
             width: 16%;
+            @media (max-width: 370px) {
+                width: 100%;
+            }
+        }
+
+        .img-width-16-6 {
+            width: 16.666%;
             @media (max-width: 370px) {
                 width: 100%;
             }
@@ -1431,6 +1439,7 @@ body::-webkit-scrollbar-thumb {
 
                 margin: 0 .3rem;
                 border-radius: 100%;
+                transition: all 600ms linear;
 
                 &:hover {
                     background: #c0e238;
